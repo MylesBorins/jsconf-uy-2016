@@ -100,6 +100,10 @@ html
     .demo {
       background-image: url('images/hammer-time.gif')
     }
+    
+    .time {
+      background-image: url('images/time.gif')
+    }
 
   body
 
@@ -184,7 +188,7 @@ html
         h3 Even was stable
         h3 Odd was unstable
 
-      section
+      section(data-bespoke-backdrop='time')
         h2 It was taking a long time
         h2 for v0.12.0
         h3 Let alone v1.0.0 
@@ -316,23 +320,26 @@ html
         pre
           code.language-javascript.
             > var parse = require('querystring').parse;
-            > parse('%p=123', undefined, undefined, {maxKeys: Infinity}).length;
+            > parse('%p=123', undefined, undefined,
+            >  {maxKeys: Infinity}).length;
             < 1
       section
         h2 After Change
         pre
           code.language-javascript.
             > var parse = require('querystring').parse;
-            > parse('%p=123', undefined, undefined, {maxKeys: Infinity}).length;
+            > parse('%p=123', undefined, undefined,
+            >   {maxKeys: Infinity}).length;
             < 0
 
       section
         h1 Smoke Testing Saved the Day!
       
       section
-        h3 While the change is currently on master
-        h3 It has not yet made its way to a release yet
-        h3 As such we can land a fix before it hits user land!
+        h3 While the change was on master
+        h3 It had not yet made its way to a release yet
+        h3 As such we were able to land a fix
+        h3 before it hit user land!
 
       section
         h1 CITGM has found all sorts of weirdness
@@ -357,6 +364,21 @@ html
         
       section
         h1 Nope!
+      
+      section
+        h1 v6.0 will be released at the end of this month
+
+      section
+        h2 It will come packed with v8 5
+        h3 And with that lots of es6 goodies
+      
+      section
+        h2 After six months as stable
+        h3 It will have 30 months in LTS
+      
+      section
+        h2 Be prepared for breakages
+        h3 If you are an early adopter
       
       section
         h2 Thank You
